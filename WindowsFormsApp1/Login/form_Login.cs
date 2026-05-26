@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         private void btn_Click_Exit(object sender, EventArgs e)
         {
             this.Close();
+            return;
         }
 
         private void btn_Click_Login(object sender, EventArgs e)
@@ -62,7 +63,7 @@ namespace WindowsFormsApp1
 
                             if (nv.isActive != true)
                             {
-                                MessageBox.Show("Tài khoản của bạn đã bị khóa\nLý do: vì không còn làm việc tại đây.");
+                                MessageBox.Show("Tài khoản của bạn đã bị khóa\nLý do: không còn làm việc tại đây.");
                                 return;
                             }
 

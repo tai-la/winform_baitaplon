@@ -47,30 +47,76 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\NhanVien.cs" />
-    <Compile Include="form_banHang.cs">
+    <Compile Include="Public\Public.cs" />
+    <Compile Include="QuanLyKhachHang\ThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_banHang.Designer.cs">
+    <Compile Include="QuanLyKhachHang\ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyMatHang\Form_QuanLyMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyMatHang\Form_QuanLyMatHang.Designer.cs">
+      <DependentUpon>Form_QuanLyMatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVien.Designer.cs">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVien_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVien\QuanLyNhanVien_Sua.Designer.cs">
+      <DependentUpon>QuanLyNhanVien_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BanHang\form_banHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang\form_banHang.Designer.cs">
       <DependentUpon>form_banHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_Login.cs">
+    <Compile Include="Login\form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_Login.Designer.cs">
+    <Compile Include="Login\form_Login.Designer.cs">
       <DependentUpon>form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_Menu.cs">
+    <Compile Include="Menu\form_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_Menu.Designer.cs">
+    <Compile Include="Menu\form_Menu.Designer.cs">
       <DependentUpon>form_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="form_Login.resx">
+    <Compile Include="QuanLyKhachHang\QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang\QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuanLyKhachHang\ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyMatHang\Form_QuanLyMatHang.resx">
+      <DependentUpon>Form_QuanLyMatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\QuanLyNhanVien.resx">
+      <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyNhanVien\QuanLyNhanVien_Sua.resx">
+      <DependentUpon>QuanLyNhanVien_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BanHang\form_banHang.resx">
+      <DependentUpon>form_banHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\form_Login.resx">
       <DependentUpon>form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_Menu.resx">
+    <EmbeddedResource Include="Menu\form_Menu.resx">
       <DependentUpon>form_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -82,6 +128,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyKhachHang\QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
