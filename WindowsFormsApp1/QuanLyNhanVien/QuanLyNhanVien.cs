@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,16 +66,20 @@ namespace quanlynhanvien
 
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
+                        string vitri = position.Text.Trim();
+                        if (vitri == "Chủ cửa hàng") vitri = "admin";
+                        else if (vitri == "Nhân viên") vitri = "staff";
+
                         cmd.Parameters.AddWithValue("@TenNV", name.Text.Trim());
                         cmd.Parameters.AddWithValue("@SDT", phone.Text.Trim());
                         cmd.Parameters.AddWithValue("@DiaChi", address.Text.Trim());
                         cmd.Parameters.AddWithValue("@TenDangNhap", tendangnhap.Text.Trim());
                         cmd.Parameters.AddWithValue("@MatKhau", pass.Text);
-                        cmd.Parameters.AddWithValue("@VaiTro", position.Text.Trim());
+                        cmd.Parameters.AddWithValue("@VaiTro", vitri);
 
                         cmd.ExecuteNonQuery();
                     }
-                } // Ra khỏi block using này là connection tự động Close()
+                }
 
                 MessageBox.Show("Thêm nhân viên mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -83,7 +88,7 @@ namespace quanlynhanvien
             {
                 if (ex.Number == 2627 || ex.Number == 2601)
                 {
-                    MessageBox.Show("Tên đăng nhập này đã tồn tại! Vui lòng chọn tên đăng nhập khác.", "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên đăng nhập này đã tồn tại! Vui lòng chọn tên khác.", "Lỗi dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -98,16 +103,23 @@ namespace quanlynhanvien
 
         private void modify_Click(object sender, EventArgs e)
         {
-            string ma = hienthi.CurrentRow.Cells["MaNV"].Value.ToString();
-            string ten = hienthi.CurrentRow.Cells["TenNV"].Value.ToString();
-            string sdt = hienthi.CurrentRow.Cells["SoDienThoai"].Value.ToString();
-            string dc = hienthi.CurrentRow.Cells["DiaChi"].Value.ToString();
-            string tdn = hienthi.CurrentRow.Cells["TenDangNhap"].Value.ToString();
-            string mk = hienthi.CurrentRow.Cells["MatKhau"].Value.ToString();
-            string vt = hienthi.CurrentRow.Cells["VaiTro"].Value.ToString();
+            if (hienthi.CurrentRow == null || hienthi.CurrentRow.Cells["MaNV"].Value == null)
+            {
+                MessageBox.Show("Vui lòng chọn một nhân viên để sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string ma = Convert.ToString(hienthi.CurrentRow.Cells["MaNV"].Value);
+            string ten = Convert.ToString(hienthi.CurrentRow.Cells["TenNV"].Value);
+            string sdt = Convert.ToString(hienthi.CurrentRow.Cells["SoDienThoai"].Value);
+            string dc = Convert.ToString(hienthi.CurrentRow.Cells["DiaChi"].Value);
+            string tdn = Convert.ToString(hienthi.CurrentRow.Cells["TenDangNhap"].Value);
+            string mk = Convert.ToString(hienthi.CurrentRow.Cells["MatKhau"].Value);
+            string vt = Convert.ToString(hienthi.CurrentRow.Cells["VaiTro"].Value);
 
             QuanLyNhanVien_Sua frm = new QuanLyNhanVien_Sua(ma, ten, sdt, dc, tdn, mk, vt);
-            frm.ShowDialog(); 
+            frm.ShowDialog();
+
             LoadData();
         }
 

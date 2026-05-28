@@ -56,6 +56,9 @@
             this.cb_khachVangLai = new System.Windows.Forms.CheckBox();
             this.lb_tichDiem = new System.Windows.Forms.Label();
             this.lb_tichDiem_value = new System.Windows.Forms.Label();
+            this.btn_huy = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_hoaDon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -223,7 +226,7 @@
             this.cb_timKiemHang.FormattingEnabled = true;
             this.cb_timKiemHang.Location = new System.Drawing.Point(17, 37);
             this.cb_timKiemHang.Name = "cb_timKiemHang";
-            this.cb_timKiemHang.Size = new System.Drawing.Size(743, 24);
+            this.cb_timKiemHang.Size = new System.Drawing.Size(459, 24);
             this.cb_timKiemHang.TabIndex = 11;
             this.cb_timKiemHang.SelectedValueChanged += new System.EventHandler(this.cb_timKiemHang_SelectedIndexChanged);
             // 
@@ -356,11 +359,56 @@
             this.lb_tichDiem_value.TabIndex = 24;
             this.lb_tichDiem_value.Text = "0";
             // 
+            // btn_huy
+            // 
+            this.btn_huy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_huy.BackColor = System.Drawing.Color.DarkGray;
+            this.btn_huy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_huy.ForeColor = System.Drawing.Color.White;
+            this.btn_huy.Location = new System.Drawing.Point(1048, 9);
+            this.btn_huy.Name = "btn_huy";
+            this.btn_huy.Size = new System.Drawing.Size(136, 43);
+            this.btn_huy.TabIndex = 25;
+            this.btn_huy.Text = "Hủy";
+            this.btn_huy.UseVisualStyleBackColor = false;
+            this.btn_huy.Click += new System.EventHandler(this.btn_huy_Click);
+            // 
+            // btn_xoa
+            // 
+            this.btn_xoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_xoa.BackColor = System.Drawing.Color.Red;
+            this.btn_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_xoa.ForeColor = System.Drawing.Color.White;
+            this.btn_xoa.Location = new System.Drawing.Point(624, 9);
+            this.btn_xoa.Name = "btn_xoa";
+            this.btn_xoa.Size = new System.Drawing.Size(136, 52);
+            this.btn_xoa.TabIndex = 26;
+            this.btn_xoa.Text = "Xóa";
+            this.btn_xoa.UseVisualStyleBackColor = false;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
+            // 
+            // btn_sua
+            // 
+            this.btn_sua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_sua.BackColor = System.Drawing.Color.Yellow;
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.ForeColor = System.Drawing.Color.Black;
+            this.btn_sua.Location = new System.Drawing.Point(482, 9);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(136, 52);
+            this.btn_sua.TabIndex = 27;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.UseVisualStyleBackColor = false;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
             // form_banHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 629);
+            this.Controls.Add(this.btn_sua);
+            this.Controls.Add(this.btn_xoa);
+            this.Controls.Add(this.btn_huy);
             this.Controls.Add(this.lb_tichDiem_value);
             this.Controls.Add(this.lb_tichDiem);
             this.Controls.Add(this.cb_khachVangLai);
@@ -423,5 +471,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Label lb_tichDiem;
         private System.Windows.Forms.Label lb_tichDiem_value;
+        private System.Windows.Forms.Button btn_huy;
+        private System.Windows.Forms.Button btn_xoa;
+        private System.Windows.Forms.Button btn_sua;
     }
 }

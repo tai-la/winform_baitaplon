@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Deployment.Application;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BanHang;
 using WindowsFormsApp1.Class;
 
 namespace WindowsFormsApp1
@@ -21,18 +13,20 @@ namespace WindowsFormsApp1
         bool isLoadedHang = false;
         bool isLoadedKH = false;
         int tongtien = 0;
-        string str_conn = "Data Source=.;Initial Catalog=btl_winform;Integrated Security=True;TrustServerCertificate=True";
+        string str_conn = WindowsFormsApp1.Public.Public.str_conn;
 
         DataTable tb_MatHang = new DataTable();
         DataTable tb_KhachHang = new DataTable();
+
         public form_banHang(NhanVien nv)
         {
             InitializeComponent();
             this.user = nv;
             lb_user.Text = nv.Name;
-            return;
         }
-        private void form_Load(object sender, EventArgs e) 
+
+        // Tải danh sách mặt hàng và khách hàng khi form vừa mở lên
+        private void form_Load(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(str_conn))
             {
@@ -41,12 +35,13 @@ namespace WindowsFormsApp1
                 Load_ComboBoxTimKiemKhachHang(conn);
             }
         }
-        private void Load_ComboBoxTimKiemMatHang(SqlConnection conn) 
+
+        private void Load_ComboBoxTimKiemMatHang(SqlConnection conn)
         {
             string query = "SELECT MaMH, TenMH, DVT, GiaNhap, GiaBan, SoLuongTon, CAST(MaMH AS VARCHAR) + ' - ' + TenMH AS HienThi FROM MatHang WHERE ConBan = 1";
-            using (SqlCommand cmd = new SqlCommand(query, conn)) 
+            using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                using (SqlDataReader reader = cmd.ExecuteReader()) 
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     tb_MatHang.Clear();
                     tb_MatHang.Load(reader);
@@ -60,9 +55,9 @@ namespace WindowsFormsApp1
                 }
             }
             isLoadedHang = true;
-            return;
         }
-        private void Load_ComboBoxTimKiemKhachHang(SqlConnection conn)
+
+        public void Load_ComboBoxTimKiemKhachHang(SqlConnection conn)
         {
             string query = "SELECT SoDienThoai, TenKH, DiaChi, DiemTichLuy, SoDienThoai + ' - ' + TenKH AS HienThi FROM KhachHang WHERE ConHoatDong = 1";
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -80,15 +75,15 @@ namespace WindowsFormsApp1
                 }
             }
             isLoadedKH = true;
-            return;
         }
+
         private void btn_Click_Exit(object sender, EventArgs e)
         {
             form_Menu menu = new form_Menu(user);
             menu.Show();
             this.Hide();
-            return;
         }
+
         private void cb_CheckedChanged_KhachVangLai(object sender, EventArgs e)
         {
             if (cb_khachVangLai.Checked)
@@ -106,15 +101,12 @@ namespace WindowsFormsApp1
                 lb_tichDiem.Enabled = false;
                 lb_tichDiem_value.Enabled = false;
 
-                cb_timKiemKhachHang.SelectedIndex = -1; 
-                cb_timKiemKhachHang.Text = "";         
-
-                
-                lb_point.Text = "0";                  
-                radioBtn_Khong.Checked = false;       
+                cb_timKiemKhachHang.SelectedIndex = -1;
+                cb_timKiemKhachHang.Text = "";
+                lb_point.Text = "0";
+                radioBtn_Khong.Checked = false;
                 radioBtn_Co.Checked = false;
                 lb_giamGia_value.Text = "0 đ";
-                cb_timKiemKhachHang = null;
             }
             else
             {
@@ -123,6 +115,8 @@ namespace WindowsFormsApp1
                 lb_khachHang.Enabled = true;
             }
         }
+
+        // Chọn mặt hàng: Bắn vào DataGridView giỏ hàng (nếu trùng thì +1 số lượng)
         private void cb_timKiemHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cb_timKiemHang.SelectedItem != null && isLoadedHang)
@@ -142,8 +136,8 @@ namespace WindowsFormsApp1
                 if (tonkho <= 0)
                 {
                     MessageBox.Show($"Sản phẩm này đã hết hàng trong kho:\n{id} - {ten}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cb_timKiemHang.SelectedIndex = -1; // Hủy chọn
-                    return; // Thoát hàm ngay lập tức, không làm gì thêm
+                    cb_timKiemHang.SelectedIndex = -1;
+                    return;
                 }
 
                 foreach (DataGridViewRow row in dgv_hoaDon.Rows)
@@ -172,6 +166,8 @@ namespace WindowsFormsApp1
                 CapNhatTienVaDiem();
             }
         }
+
+        // Hiển thị điểm tích lũy khi chọn tên khách hàng
         private void cb_timKiemKhachHang_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cb_timKiemKhachHang.SelectedItem != null && isLoadedKH)
@@ -180,7 +176,7 @@ namespace WindowsFormsApp1
                 string point = Convert.ToString(item["DiemTichLuy"]);
 
                 lb_point.Enabled = true;
-                lb_Diem.Enabled = true; 
+                lb_Diem.Enabled = true;
                 lb_suDungDiem.Enabled = true;
                 radioBtn_Co.Enabled = true;
                 radioBtn_Khong.Enabled = true;
@@ -191,6 +187,8 @@ namespace WindowsFormsApp1
                 lb_point.Text = point;
             }
         }
+
+        // Tính toán các loại tiền (tiền trả, tiền giảm giá, điểm thưởng)
         private void CapNhatTienVaDiem()
         {
             int tienGiamGia = 0;
@@ -211,22 +209,22 @@ namespace WindowsFormsApp1
 
             int diemCongThem = tienPhaiTra / 100000;
             lb_tichDiem_value.Text = $"{diemCongThem}";
-
         }
+
         private void radioBtn_Co_CheckedChanged(object sender, EventArgs e)
         {
             CapNhatTienVaDiem();
         }
+
+        // Xử lý lưu hóa đơn, chi tiết, trừ tồn kho và cập nhật điểm khách hàng
         private void btn_thanhToan_Click(object sender, EventArgs e)
         {
-            // Kiểm tra xem giỏ hàng có đồ không
             if (dgv_hoaDon.Rows.Count == 0 || (dgv_hoaDon.Rows.Count == 1 && dgv_hoaDon.Rows[0].IsNewRow))
             {
                 MessageBox.Show("Vui lòng chọn ít nhất một mặt hàng để thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Tính toán lại tiền và điểm
             int diemTru = 0;
             int tienGiam = 0;
 
@@ -245,7 +243,6 @@ namespace WindowsFormsApp1
             int tienPhaiTra = tongtien - tienGiam;
             int diemCongThem = cb_khachVangLai.Checked ? 0 : (tienPhaiTra / 100000);
 
-            // MỞ KẾT NỐI VÀ LƯU VÀO CSDL
             using (SqlConnection conn = new SqlConnection(str_conn))
             {
                 conn.Open();
@@ -253,76 +250,53 @@ namespace WindowsFormsApp1
 
                 try
                 {
-                    // 1. THÊM VÀO BẢNG HOADON 
-                    string queryHD = @"INSERT INTO HoaDon (NgayLap, TongTien, GhiChu, SoDienThoai_FK, MaNV_FK) 
-                               OUTPUT INSERTED.MaHD 
-                               VALUES (@NgayLap, @TongTien, @GhiChu, @SDT, @MaNV)";
+                    // LƯU HÓA ĐƠN
+                    string sdt = (cb_khachVangLai.Checked || cb_timKiemKhachHang.SelectedValue == null) ? "NULL" : $"'{cb_timKiemKhachHang.SelectedValue}'";
+                    string ngayLap = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    string queryHD = $"INSERT INTO HoaDon (NgayLap, TongTien, GhiChu, SoDienThoai_FK, MaNV_FK) OUTPUT INSERTED.MaHD VALUES ('{ngayLap}', {tienPhaiTra}, '', {sdt}, 1)";
+
                     int maHD = 0;
                     using (SqlCommand cmdHD = new SqlCommand(queryHD, conn, trans))
                     {
-                        cmdHD.Parameters.AddWithValue("@NgayLap", DateTime.Now);
-                        cmdHD.Parameters.AddWithValue("@TongTien", tienPhaiTra);
-                        cmdHD.Parameters.AddWithValue("@GhiChu", "");
-
-                        if (cb_khachVangLai.Checked || cb_timKiemKhachHang.SelectedValue == null)
-                            cmdHD.Parameters.AddWithValue("@SDT", DBNull.Value);
-                        else
-                            cmdHD.Parameters.AddWithValue("@SDT", cb_timKiemKhachHang.SelectedValue.ToString());
-
-                        // Lấy ID nhân viên từ biến user của bạn
-                        cmdHD.Parameters.AddWithValue("@MaNV", 1); // Đổi số 1 thành ID nhân viên thực tế nếu bạn có, vd: user.ID
-
                         maHD = (int)cmdHD.ExecuteScalar();
                     }
 
-                    // 2. THÊM VÀO CHITIETHOADON VÀ TRỪ TỒN KHO MATHANG
-                    string queryCT = @"INSERT INTO ChiTietHoaDon (MaHD_FK, MaMH_FK, SoLuong, DonGia, ThanhTien) 
-                               VALUES (@MaHD, @MaMH, @SoLuong, @DonGia, @ThanhTien)";
-                    string queryKho = @"UPDATE MatHang SET SoLuongTon = SoLuongTon - @SoLuong WHERE MaMH = @MaMH";
-
+                    // LƯU CHI TIẾT HÓA ĐƠN VÀ TRỪ TỒN KHO
                     foreach (DataGridViewRow row in dgv_hoaDon.Rows)
                     {
                         if (row.IsNewRow) continue;
 
-                        int maMH = Convert.ToInt32(row.Cells[0].Value);
-                        int donGia = Convert.ToInt32(row.Cells[3].Value);
-                        int soLuong = Convert.ToInt32(row.Cells[4].Value);
-                        int thanhTien = Convert.ToInt32(row.Cells[5].Value);
+                        string maMH = row.Cells[0].Value.ToString();
+                        string donGia = row.Cells[3].Value.ToString();
+                        string soLuong = row.Cells[4].Value.ToString();
+                        string thanhTien = row.Cells[5].Value.ToString();
 
+                        string queryCT = $"INSERT INTO ChiTietHoaDon (MaHD_FK, MaMH_FK, SoLuong, DonGia, ThanhTien) VALUES ({maHD}, {maMH}, {soLuong}, {donGia}, {thanhTien})";
                         using (SqlCommand cmdCT = new SqlCommand(queryCT, conn, trans))
                         {
-                            cmdCT.Parameters.AddWithValue("@MaHD", maHD);
-                            cmdCT.Parameters.AddWithValue("@MaMH", maMH);
-                            cmdCT.Parameters.AddWithValue("@SoLuong", soLuong);
-                            cmdCT.Parameters.AddWithValue("@DonGia", donGia);
-                            cmdCT.Parameters.AddWithValue("@ThanhTien", thanhTien);
                             cmdCT.ExecuteNonQuery();
                         }
 
+                        string queryKho = $"UPDATE MatHang SET SoLuongTon = SoLuongTon - {soLuong} WHERE MaMH = {maMH}";
                         using (SqlCommand cmdKho = new SqlCommand(queryKho, conn, trans))
                         {
-                            cmdKho.Parameters.AddWithValue("@MaMH", maMH);
-                            cmdKho.Parameters.AddWithValue("@SoLuong", soLuong);
                             cmdKho.ExecuteNonQuery();
                         }
                     }
 
-                    // 3. CẬP NHẬT ĐIỂM CHO KHÁCH HÀNG 
+                    // CẬP NHẬT ĐIỂM KHÁCH HÀNG
                     if (!cb_khachVangLai.Checked && cb_timKiemKhachHang.SelectedValue != null)
                     {
-                        string queryKH = @"UPDATE KhachHang 
-                                   SET DiemTichLuy = DiemTichLuy - @DiemTru + @DiemCong 
-                                   WHERE SoDienThoai = @SDT";
+                        string sdtKH = cb_timKiemKhachHang.SelectedValue.ToString();
+                        string queryKH = $"UPDATE KhachHang SET DiemTichLuy = DiemTichLuy - {diemTru} + {diemCongThem} WHERE SoDienThoai = '{sdtKH}'";
+
                         using (SqlCommand cmdKH = new SqlCommand(queryKH, conn, trans))
                         {
-                            cmdKH.Parameters.AddWithValue("@DiemTru", diemTru);
-                            cmdKH.Parameters.AddWithValue("@DiemCong", diemCongThem);
-                            cmdKH.Parameters.AddWithValue("@SDT", cb_timKiemKhachHang.SelectedValue.ToString());
                             cmdKH.ExecuteNonQuery();
                         }
                     }
 
-                    // CHỐT LƯU 
                     trans.Commit();
                     MessageBox.Show("Thanh toán hóa đơn thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -335,6 +309,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
         private void ResetFormHoaDon()
         {
             dgv_hoaDon.Rows.Clear();
@@ -362,8 +337,97 @@ namespace WindowsFormsApp1
         private void btn_themKhachHang_Click(object sender, EventArgs e)
         {
             form_ThemKhachHang form = new form_ThemKhachHang();
-            form.Show();
-            return;
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                using (SqlConnection conn = new SqlConnection(str_conn))
+                {
+                    conn.Open();
+                    Load_ComboBoxTimKiemKhachHang(conn);
+                }
+            }
+        }
+
+        private void btn_huy_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy giỏ hàng hiện tại?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                ResetFormHoaDon();
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (dgv_hoaDon.CurrentRow == null || dgv_hoaDon.CurrentRow.IsNewRow)
+            {
+                MessageBox.Show("Vui lòng chọn một mặt hàng trong giỏ để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa mặt hàng này khỏi giỏ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                int thanhTienDongsapXoa = Convert.ToInt32(dgv_hoaDon.CurrentRow.Cells[5].Value);
+                tongtien -= thanhTienDongsapXoa;
+
+                dgv_hoaDon.Rows.Remove(dgv_hoaDon.CurrentRow);
+
+                CapNhatTienVaDiem();
+            }
+        }
+
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            if (dgv_hoaDon.CurrentRow == null || dgv_hoaDon.CurrentRow.IsNewRow)
+            {
+                MessageBox.Show("Vui lòng chọn một mặt hàng trong giỏ để sửa số lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string id = dgv_hoaDon.CurrentRow.Cells[0].Value.ToString();
+            string ten = dgv_hoaDon.CurrentRow.Cells[1].Value.ToString();
+            int donGia = Convert.ToInt32(dgv_hoaDon.CurrentRow.Cells[3].Value);
+            int slHienTai = Convert.ToInt32(dgv_hoaDon.CurrentRow.Cells[4].Value);
+
+            form_suaSL frm = new form_suaSL(ten, slHienTai);
+            if (frm.ShowDialog() != DialogResult.OK) return;
+
+            int slMoi = frm.SoLuongMoi;
+
+            int tonKho = 0;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(str_conn))
+                {
+                    conn.Open();
+                    string query = "SELECT SoLuongTon FROM MatHang WHERE MaMH = " + id;
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        tonKho = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kiểm tra tồn kho: " + ex.Message, "Lỗi CSDL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (slMoi > tonKho)
+            {
+                MessageBox.Show($"Kho không đủ hàng! Số lượng yêu cầu: {slMoi} - Hiện còn: {tonKho}", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int thanhTienCu = donGia * slHienTai;
+            int thanhTienMoi = donGia * slMoi;
+
+            tongtien = tongtien - thanhTienCu + thanhTienMoi;
+
+            dgv_hoaDon.CurrentRow.Cells[4].Value = slMoi;
+            dgv_hoaDon.CurrentRow.Cells[5].Value = thanhTienMoi;
+
+            CapNhatTienVaDiem();
         }
     }
 }

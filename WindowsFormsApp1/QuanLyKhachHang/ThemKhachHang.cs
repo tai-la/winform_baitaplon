@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
             this.StartPosition = FormStartPosition.CenterParent;
             this.Text = "Thêm Khách Hàng Mới";
         }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             // 1. Kiểm tra nhập liệu
@@ -74,6 +73,7 @@ namespace WindowsFormsApp1
                 // Trả về kết quả OK để Form chính biết và Load lại bảng
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+
             }
             catch (Exception ex)
             {

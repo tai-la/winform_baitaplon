@@ -48,8 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -117,7 +117,7 @@
             this.txtDiemtichluy.Location = new System.Drawing.Point(16, 405);
             this.txtDiemtichluy.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiemtichluy.Name = "txtDiemtichluy";
-            this.txtDiemtichluy.Size = new System.Drawing.Size(220, 29);
+            this.txtDiemtichluy.Size = new System.Drawing.Size(285, 29);
             this.txtDiemtichluy.TabIndex = 8;
             // 
             // txtDiaChi
@@ -127,7 +127,7 @@
             this.txtDiaChi.Location = new System.Drawing.Point(16, 289);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(220, 29);
+            this.txtDiaChi.Size = new System.Drawing.Size(285, 29);
             this.txtDiaChi.TabIndex = 7;
             // 
             // txtTenKH
@@ -137,7 +137,7 @@
             this.txtTenKH.Location = new System.Drawing.Point(16, 199);
             this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(220, 29);
+            this.txtTenKH.Size = new System.Drawing.Size(285, 29);
             this.txtTenKH.TabIndex = 6;
             // 
             // label5
@@ -175,7 +175,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1141, 34);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1076, 34);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btn_TimKiem
@@ -184,7 +184,7 @@
             this.btn_TimKiem.Location = new System.Drawing.Point(4, 4);
             this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TimKiem.Name = "btn_TimKiem";
-            this.btn_TimKiem.Size = new System.Drawing.Size(259, 26);
+            this.btn_TimKiem.Size = new System.Drawing.Size(243, 26);
             this.btn_TimKiem.TabIndex = 1;
             this.btn_TimKiem.Text = "Tìm Kiếm";
             this.btn_TimKiem.UseVisualStyleBackColor = true;
@@ -195,10 +195,10 @@
             this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.Location = new System.Drawing.Point(271, 4);
+            this.txtTimKiem.Location = new System.Drawing.Point(255, 4);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(866, 29);
+            this.txtTimKiem.Size = new System.Drawing.Size(817, 29);
             this.txtTimKiem.TabIndex = 2;
             // 
             // label4
@@ -235,7 +235,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.081081F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.91892F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1149, 705);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1084, 705);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dgvKhachHang
@@ -249,7 +249,7 @@
             this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
-            this.dgvKhachHang.Size = new System.Drawing.Size(1141, 655);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1076, 655);
             this.dgvKhachHang.TabIndex = 1;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
@@ -262,7 +262,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1157, 735);
+            this.groupBox2.Size = new System.Drawing.Size(1092, 735);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách khách hàng";
@@ -284,7 +284,7 @@
             this.txtSDT.Location = new System.Drawing.Point(16, 110);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(220, 29);
+            this.txtSDT.Size = new System.Drawing.Size(285, 29);
             this.txtSDT.TabIndex = 0;
             // 
             // groupBox1
@@ -309,10 +309,22 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(574, 735);
+            this.groupBox1.Size = new System.Drawing.Size(639, 735);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // btn_thoat
+            // 
+            this.btn_thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_thoat.Location = new System.Drawing.Point(428, 596);
+            this.btn_thoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(105, 98);
+            this.btn_thoat.TabIndex = 13;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // splitContainer1
             // 
@@ -330,21 +342,9 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
             this.splitContainer1.Size = new System.Drawing.Size(1736, 735);
-            this.splitContainer1.SplitterDistance = 574;
+            this.splitContainer1.SplitterDistance = 639;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // btn_thoat
-            // 
-            this.btn_thoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_thoat.Location = new System.Drawing.Point(428, 596);
-            this.btn_thoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(105, 98);
-            this.btn_thoat.TabIndex = 13;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.UseVisualStyleBackColor = true;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // form_KhachHang
             // 

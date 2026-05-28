@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BanHang\form_suaSL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BanHang\form_suaSL.Designer.cs">
+      <DependentUpon>form_suaSL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\NhanVien.cs" />
     <Compile Include="Public\Public.cs" />
     <Compile Include="QuanLyKhachHang\ThemKhachHang.cs">
@@ -98,6 +104,9 @@
     <Compile Include="QuanLyKhachHang\QuanLyKhachHang.Designer.cs">
       <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BanHang\form_suaSL.resx">
+      <DependentUpon>form_suaSL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKhachHang\ThemKhachHang.resx">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
