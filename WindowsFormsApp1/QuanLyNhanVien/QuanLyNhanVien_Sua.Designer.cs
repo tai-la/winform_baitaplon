@@ -53,9 +53,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(99, 31);
+            this.label4.Location = new System.Drawing.Point(132, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 20);
+            this.label4.Size = new System.Drawing.Size(240, 25);
             this.label4.TabIndex = 29;
             this.label4.Text = "Sửa thông tin nhân viên";
             // 
@@ -66,9 +67,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(202, 91);
+            this.label9.Location = new System.Drawing.Point(269, 112);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 15);
+            this.label9.Size = new System.Drawing.Size(95, 18);
             this.label9.TabIndex = 40;
             this.label9.Text = "Mã nhân viên";
             // 
@@ -79,9 +81,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(202, 140);
+            this.label1.Location = new System.Drawing.Point(269, 172);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 15);
+            this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 26;
             this.label1.Text = "Tên nhân viên";
             // 
@@ -89,9 +92,10 @@
             // 
             this.pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pass.Location = new System.Drawing.Point(331, 382);
+            this.pass.Location = new System.Drawing.Point(441, 470);
+            this.pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pass.Name = "pass";
-            this.pass.Size = new System.Drawing.Size(228, 20);
+            this.pass.Size = new System.Drawing.Size(303, 22);
             this.pass.TabIndex = 39;
             // 
             // label2
@@ -101,9 +105,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(202, 192);
+            this.label2.Location = new System.Drawing.Point(269, 236);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 15);
+            this.label2.Size = new System.Drawing.Size(94, 18);
             this.label2.TabIndex = 27;
             this.label2.Text = "Số điện thoại";
             // 
@@ -111,9 +116,10 @@
             // 
             this.tendangnhap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tendangnhap.Location = new System.Drawing.Point(331, 336);
+            this.tendangnhap.Location = new System.Drawing.Point(441, 414);
+            this.tendangnhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tendangnhap.Name = "tendangnhap";
-            this.tendangnhap.Size = new System.Drawing.Size(228, 20);
+            this.tendangnhap.Size = new System.Drawing.Size(303, 22);
             this.tendangnhap.TabIndex = 38;
             // 
             // label3
@@ -123,9 +129,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(202, 246);
+            this.label3.Location = new System.Drawing.Point(269, 303);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 28;
             this.label3.Text = "Địa chỉ";
             // 
@@ -136,9 +143,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(202, 382);
+            this.label8.Location = new System.Drawing.Point(269, 470);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 15);
+            this.label8.Size = new System.Drawing.Size(69, 18);
             this.label8.TabIndex = 37;
             this.label8.Text = "Mật khẩu";
             // 
@@ -147,28 +155,31 @@
             this.maNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maNV.Enabled = false;
-            this.maNV.Location = new System.Drawing.Point(331, 91);
+            this.maNV.Location = new System.Drawing.Point(441, 112);
+            this.maNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.maNV.Name = "maNV";
             this.maNV.ReadOnly = true;
-            this.maNV.Size = new System.Drawing.Size(228, 20);
+            this.maNV.Size = new System.Drawing.Size(303, 22);
             this.maNV.TabIndex = 30;
             // 
             // phone
             // 
             this.phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.phone.Location = new System.Drawing.Point(331, 192);
+            this.phone.Location = new System.Drawing.Point(441, 236);
+            this.phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(228, 20);
+            this.phone.Size = new System.Drawing.Size(303, 22);
             this.phone.TabIndex = 36;
             // 
             // name
             // 
             this.name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.name.Location = new System.Drawing.Point(331, 140);
+            this.name.Location = new System.Drawing.Point(441, 172);
+            this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(228, 20);
+            this.name.Size = new System.Drawing.Size(303, 22);
             this.name.TabIndex = 31;
             // 
             // label7
@@ -178,9 +189,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(202, 336);
+            this.label7.Location = new System.Drawing.Point(269, 414);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 15);
+            this.label7.Size = new System.Drawing.Size(105, 18);
             this.label7.TabIndex = 35;
             this.label7.Text = "Tên đăng nhập";
             // 
@@ -192,9 +204,10 @@
             this.position.Items.AddRange(new object[] {
             "Chủ cửa hàng",
             "Nhân viên"});
-            this.position.Location = new System.Drawing.Point(331, 295);
+            this.position.Location = new System.Drawing.Point(441, 363);
+            this.position.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.position.Name = "position";
-            this.position.Size = new System.Drawing.Size(228, 21);
+            this.position.Size = new System.Drawing.Size(303, 24);
             this.position.TabIndex = 32;
             // 
             // label6
@@ -204,9 +217,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(202, 295);
+            this.label6.Location = new System.Drawing.Point(269, 363);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 15);
+            this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 33;
             this.label6.Text = "Vai trò";
             // 
@@ -250,18 +264,20 @@
             "Đồng Tháp",
             "An Giang",
             "Bạc Liêu"});
-            this.address.Location = new System.Drawing.Point(331, 246);
+            this.address.Location = new System.Drawing.Point(441, 303);
+            this.address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.address.Name = "address";
-            this.address.Size = new System.Drawing.Size(228, 21);
+            this.address.Size = new System.Drawing.Size(303, 24);
             this.address.TabIndex = 34;
             // 
             // submit
             // 
             this.submit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.submit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.submit.Location = new System.Drawing.Point(672, 393);
+            this.submit.Location = new System.Drawing.Point(896, 484);
+            this.submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(95, 45);
+            this.submit.Size = new System.Drawing.Size(127, 55);
             this.submit.TabIndex = 41;
             this.submit.Text = "Lưu thay đổi";
             this.submit.UseVisualStyleBackColor = false;
@@ -269,9 +285,9 @@
             // 
             // QuanLyNhanVien_Sua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 450);
+            this.ClientSize = new System.Drawing.Size(1093, 554);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
@@ -288,7 +304,9 @@
             this.Controls.Add(this.position);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.address);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QuanLyNhanVien_Sua";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyNhanVien_Sua";
             this.ResumeLayout(false);
             this.PerformLayout();

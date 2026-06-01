@@ -123,7 +123,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.maNV.Enabled = false;
             this.maNV.Location = new System.Drawing.Point(161, 69);
-            this.maNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maNV.Margin = new System.Windows.Forms.Padding(4);
             this.maNV.Name = "maNV";
             this.maNV.ReadOnly = true;
             this.maNV.Size = new System.Drawing.Size(180, 22);
@@ -134,7 +134,7 @@
             this.name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.name.Location = new System.Drawing.Point(161, 129);
-            this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.name.Margin = new System.Windows.Forms.Padding(4);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(180, 22);
             this.name.TabIndex = 5;
@@ -147,7 +147,7 @@
             this.hienthi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hienthi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hienthi.Location = new System.Drawing.Point(5, 129);
-            this.hienthi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hienthi.Margin = new System.Windows.Forms.Padding(4);
             this.hienthi.Name = "hienthi";
             this.hienthi.RowHeadersWidth = 51;
             this.hienthi.Size = new System.Drawing.Size(670, 421);
@@ -162,7 +162,7 @@
             "Chủ cửa hàng",
             "Nhân viên"});
             this.position.Location = new System.Drawing.Point(161, 320);
-            this.position.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.position.Margin = new System.Windows.Forms.Padding(4);
             this.position.Name = "position";
             this.position.Size = new System.Drawing.Size(180, 24);
             this.position.TabIndex = 7;
@@ -186,7 +186,7 @@
             this.search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.search.Location = new System.Drawing.Point(63, 47);
-            this.search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search.Margin = new System.Windows.Forms.Padding(4);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(430, 22);
             this.search.TabIndex = 9;
@@ -195,7 +195,7 @@
             // 
             this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.add.Location = new System.Drawing.Point(13, 487);
-            this.add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(77, 55);
             this.add.TabIndex = 13;
@@ -258,7 +258,7 @@
             "An Giang",
             "Bạc Liêu"});
             this.address.Location = new System.Drawing.Point(161, 260);
-            this.address.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.address.Margin = new System.Windows.Forms.Padding(4);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(180, 24);
             this.address.TabIndex = 15;
@@ -267,7 +267,7 @@
             // 
             this.modify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.modify.Location = new System.Drawing.Point(123, 487);
-            this.modify.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.modify.Margin = new System.Windows.Forms.Padding(4);
             this.modify.Name = "modify";
             this.modify.Size = new System.Drawing.Size(77, 55);
             this.modify.TabIndex = 16;
@@ -279,7 +279,7 @@
             // 
             this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.delete.Location = new System.Drawing.Point(232, 487);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(77, 55);
             this.delete.TabIndex = 17;
@@ -291,7 +291,7 @@
             // 
             this.thoat.BackColor = System.Drawing.Color.LightCoral;
             this.thoat.Location = new System.Drawing.Point(341, 487);
-            this.thoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thoat.Margin = new System.Windows.Forms.Padding(4);
             this.thoat.Name = "thoat";
             this.thoat.Size = new System.Drawing.Size(81, 55);
             this.thoat.TabIndex = 18;
@@ -304,7 +304,7 @@
             this.find.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.find.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.find.Location = new System.Drawing.Point(538, 54);
-            this.find.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.find.Margin = new System.Windows.Forms.Padding(4);
             this.find.Name = "find";
             this.find.Size = new System.Drawing.Size(103, 48);
             this.find.TabIndex = 19;
@@ -331,7 +331,7 @@
             this.phone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.phone.Location = new System.Drawing.Point(161, 193);
-            this.phone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phone.Margin = new System.Windows.Forms.Padding(4);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(180, 22);
             this.phone.TabIndex = 21;
@@ -355,7 +355,7 @@
             this.tendangnhap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tendangnhap.Location = new System.Drawing.Point(161, 370);
-            this.tendangnhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tendangnhap.Margin = new System.Windows.Forms.Padding(4);
             this.tendangnhap.Name = "tendangnhap";
             this.tendangnhap.Size = new System.Drawing.Size(180, 22);
             this.tendangnhap.TabIndex = 23;
@@ -365,7 +365,7 @@
             this.pass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pass.Location = new System.Drawing.Point(161, 427);
-            this.pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass.Margin = new System.Windows.Forms.Padding(4);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(180, 22);
             this.pass.TabIndex = 24;
@@ -407,7 +407,7 @@
             this.panel1.Controls.Add(this.modify);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(450, 546);
             this.panel1.TabIndex = 26;
@@ -421,7 +421,7 @@
             this.panel2.Controls.Add(this.search);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(462, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(679, 546);
             this.panel2.TabIndex = 27;
@@ -449,7 +449,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -462,8 +462,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 554);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QuanLyNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hienthi)).EndInit();

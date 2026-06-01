@@ -101,6 +101,7 @@
             this.Controls.Add(this.lb_tenMH);
             this.Controls.Add(this.label1);
             this.Name = "form_suaSL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa số lượng";
             this.ResumeLayout(false);
             this.PerformLayout();

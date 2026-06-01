@@ -89,6 +89,7 @@
             // dgv_hoaDon
             // 
             this.dgv_hoaDon.AllowUserToAddRows = false;
+            this.dgv_hoaDon.AllowUserToDeleteRows = false;
             this.dgv_hoaDon.AllowUserToResizeRows = false;
             this.dgv_hoaDon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_hoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -101,6 +102,7 @@
             this.ThanhTien});
             this.dgv_hoaDon.Location = new System.Drawing.Point(17, 70);
             this.dgv_hoaDon.Name = "dgv_hoaDon";
+            this.dgv_hoaDon.ReadOnly = true;
             this.dgv_hoaDon.RowHeadersWidth = 51;
             this.dgv_hoaDon.RowTemplate.Height = 24;
             this.dgv_hoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -112,36 +114,42 @@
             this.MaMH.HeaderText = "ID";
             this.MaMH.MinimumWidth = 6;
             this.MaMH.Name = "MaMH";
+            this.MaMH.ReadOnly = true;
             // 
             // TenMH
             // 
             this.TenMH.HeaderText = "Tên mặt hàng";
             this.TenMH.MinimumWidth = 6;
             this.TenMH.Name = "TenMH";
+            this.TenMH.ReadOnly = true;
             // 
             // DVT
             // 
             this.DVT.HeaderText = "ĐVT";
             this.DVT.MinimumWidth = 6;
             this.DVT.Name = "DVT";
+            this.DVT.ReadOnly = true;
             // 
             // DonGia
             // 
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
             // 
             // SoLuong
             // 
             this.SoLuong.HeaderText = "Số lượng";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
             // 
             // ThanhTien
             // 
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // label2
             // 
@@ -224,7 +232,7 @@
             this.cb_timKiemHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_timKiemHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_timKiemHang.FormattingEnabled = true;
-            this.cb_timKiemHang.Location = new System.Drawing.Point(17, 37);
+            this.cb_timKiemHang.Location = new System.Drawing.Point(17, 38);
             this.cb_timKiemHang.Name = "cb_timKiemHang";
             this.cb_timKiemHang.Size = new System.Drawing.Size(459, 24);
             this.cb_timKiemHang.TabIndex = 11;
@@ -397,7 +405,7 @@
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(136, 52);
             this.btn_sua.TabIndex = 27;
-            this.btn_sua.Text = "Sửa";
+            this.btn_sua.Text = "Sửa SL";
             this.btn_sua.UseVisualStyleBackColor = false;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 

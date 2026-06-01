@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
 using WindowsFormsApp1.Class;
+using WindowsFormsApp1.Menu;
 using WindowsFormsApp1.Public;
 
 namespace quanlynhanvien
@@ -184,10 +185,20 @@ namespace quanlynhanvien
 
         private void thoat_Click(object sender, EventArgs e)
         {
-            form_Menu form = new form_Menu(user);
-            form.Show();
-            this.Close();
-            return;
+            if (user.Role == "admin")
+            {
+                form_Menu_admin menu = new form_Menu_admin(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
+            else
+            {
+                form_Menu menu = new form_Menu(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
         }
 
         private void find_Click(object sender, EventArgs e)

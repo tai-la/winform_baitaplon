@@ -53,7 +53,25 @@
       <DependentUpon>form_suaSL.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\NhanVien.cs" />
+    <Compile Include="Menu\form_Menu_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\form_Menu_admin.Designer.cs">
+      <DependentUpon>form_Menu_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Public\Public.cs" />
+    <Compile Include="QuanLyDonHang\form_chiTietDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDonHang\form_chiTietDonHang.Designer.cs">
+      <DependentUpon>form_chiTietDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyDonHang\form_quanLyDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDonHang\form_quanLyDonHang.Designer.cs">
+      <DependentUpon>form_quanLyDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyKhachHang\ThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,15 @@
     </Compile>
     <EmbeddedResource Include="BanHang\form_suaSL.resx">
       <DependentUpon>form_suaSL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\form_Menu_admin.resx">
+      <DependentUpon>form_Menu_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyDonHang\form_chiTietDonHang.resx">
+      <DependentUpon>form_chiTietDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyDonHang\form_quanLyDonHang.resx">
+      <DependentUpon>form_quanLyDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKhachHang\ThemKhachHang.resx">
       <DependentUpon>ThemKhachHang.cs</DependentUpon>

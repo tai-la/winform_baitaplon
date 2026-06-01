@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient; 
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient; 
-using System.Data;
-using WindowsFormsApp1.Class;
 using WindowsFormsApp1;
+using WindowsFormsApp1.Class;
+using WindowsFormsApp1.Menu;
 
 namespace QuanLyMatHang
 {
@@ -199,10 +200,20 @@ namespace QuanLyMatHang
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            form_Menu form = new form_Menu(user);
-            form.Show();
-            this.Close();
-            return;
+            if (user.Role == "admin")
+            {
+                form_Menu_admin menu = new form_Menu_admin(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
+            else
+            {
+                form_Menu menu = new form_Menu(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
         }
 
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)

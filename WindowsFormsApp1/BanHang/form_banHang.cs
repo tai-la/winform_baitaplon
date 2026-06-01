@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using WindowsFormsApp1.BanHang;
 using WindowsFormsApp1.Class;
+using WindowsFormsApp1.Menu;
 
 namespace WindowsFormsApp1
 {
@@ -79,9 +80,20 @@ namespace WindowsFormsApp1
 
         private void btn_Click_Exit(object sender, EventArgs e)
         {
-            form_Menu menu = new form_Menu(user);
-            menu.Show();
-            this.Hide();
+            if (user.Role == "admin")
+            {
+                form_Menu_admin menu = new form_Menu_admin(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
+            else
+            {
+                form_Menu menu = new form_Menu(user);
+                menu.Show();
+                this.Hide();
+                return;
+            }
         }
 
         private void cb_CheckedChanged_KhachVangLai(object sender, EventArgs e)

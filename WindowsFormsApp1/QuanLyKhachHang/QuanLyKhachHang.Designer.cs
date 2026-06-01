@@ -354,6 +354,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "form_KhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_KhachHang";
             this.Load += new System.EventHandler(this.form_KhachHang_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
